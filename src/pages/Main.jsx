@@ -21,24 +21,22 @@ export default function Main() {
     <div className="min-h-screen bg-black text-green-400 p-8 flex flex-col items-center">
       <h1 className="text-4xl font-bold mb-8">Your Generated Playlist</h1>
 
-      <div className="w-full max-w-2xl bg-gray-800 rounded-lg p-6 mb-8">
-        <h2 className="text-2xl font-semibold mb-4">Now Playing</h2>
-        <div className="flex items-center space-x-4">
-          <img
-            src="/placeholder.svg?height=150&width=150"
-            alt="Album cover"
-            width={150}
-            height={150}
-            className="rounded-md"
-          />
-          <div>
-            <h3 className="text-xl font-semibold">
-              {playlist[currentSong].title}
-            </h3>
-            <p className="text-gray-400">{playlist[currentSong].artist}</p>
-          </div>
+      <div className="w-full max-w-2xl bg-gray-800 rounded-lg p-6 mb-8 flex flex-col items-center">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4JpY_HdkDcs5NavBI1-b9h-m7wPaIEXJ2sQ&s"
+          alt="Album cover"
+          width={300}
+          height={300}
+          className="rounded-md mb-6"
+        />
+        <div className="text-center">
+          <h2 className="text-2xl font-semibold mb-2">Now Playing</h2>
+          <h3 className="text-xl font-semibold">
+            {playlist[currentSong].title}
+          </h3>
+          <p className="text-gray-400">{playlist[currentSong].artist}</p>
         </div>
-        <div className="flex justify-center items-center space-x-4 mt-4">
+        <div className="flex justify-center items-center space-x-4 mt-6">
           <button
             onClick={prevSong}
             className="p-2 rounded-full bg-green-500 text-black hover:bg-green-600"

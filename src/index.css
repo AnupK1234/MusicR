@@ -25,3 +25,8 @@ html {
     background: #22c55e;
   }
   
+  @layer components {
+    .mybor {
+      border: 2px solid red;
+    }
+  }
