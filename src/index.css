@@ -7,22 +7,35 @@ html {
   }
   
   /* For Webkit browsers like Chrome, Safari */
-  ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+  @media (min-width: 768px) {
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #1a1a1a;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #a855f7;
+      border-radius: 5px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9333ea;
+    }
   }
   
-  ::-webkit-scrollbar-track {
-    background: #1a1a1a;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #4ade80;
-    border-radius: 5px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #22c55e;
+  @media (max-width: 767px) {
+    .custom-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    ::-webkit-scrollbar {
+      display: none;
+    }
   }
   
   @layer components {

@@ -2,40 +2,61 @@ export const flashcards = [
   {
     id: 1,
     term: "Photosynthesis",
-    definition:
-      "The process by which plants use sunlight to produce energy from carbon dioxide and water",
-    image:
-      "https://www.careerpower.in/blog/wp-content/uploads/sites/2/2023/07/31203703/Photosynthesis-1.png",
+    definition: "The process by which plants use sunlight to produce energy from carbon dioxide and water.",
   },
   {
     id: 2,
     term: "Mitosis",
-    definition:
-      "A type of cell division that results in two daughter cells each having the same number and kind of chromosomes as the parent nucleus",
-    image:
-      "https://cdn.mos.cms.futurecdn.net/GSDwc2uvfTsMaoEb5WoHUF-1200-80.jpg",
+    definition: "A type of cell division that results in two daughter cells each having the same number and kind of chromosomes as the parent nucleus.",
   },
   {
     id: 3,
     term: "Gravity",
-    definition:
-      "The force that attracts a body toward the center of the earth, or toward any other physical body having mass",
-    image: "https://cdn.mos.cms.futurecdn.net/jFaqrJF4ZpsL8u6iX4rtu7.jpg",
+    definition: "The force that attracts a body toward the center of the earth, or toward any other physical body having mass.",
   },
   {
     id: 4,
     term: "Atom",
-    definition:
-      "The basic unit of a chemical element, consisting of a positively charged nucleus surrounded by negatively charged electrons",
-    image:
-      "https://cdn.pixabay.com/photo/2016/06/22/08/40/atom-1472657_640.png",
+    definition: "The basic unit of a chemical element, consisting of a positively charged nucleus surrounded by negatively charged electrons.",
   },
   {
     id: 5,
     term: "Plate Tectonics",
-    definition:
-      "A scientific theory describing the large-scale motion of seven large plates and the movements of a larger number of smaller plates of the Earth's lithosphere",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGBQIgIbCOlhqZcCnjUZWF5SVtxrkc5_9c6g&s",
+    definition: "A scientific theory describing the large-scale motion of seven large plates and the movements of a larger number of smaller plates of the Earth's lithosphere.",
   },
+  {
+    id: 6,
+    term: "Metaphor",
+    definition: "A figure of speech that compares two things that are not alike but do share some common characteristics.",
+  },
+  {
+    id: 7,
+    term: "Cell",
+    definition: "The basic structural and functional unit of all living organisms.",
+  },
+  {
+    id: 8,
+    term: "DNA",
+    definition: "Deoxyribonucleic acid, the molecule that carries the genetic instructions for the development, functioning, growth, and reproduction of all known organisms.",
+  },
+  {
+    id: 9,
+    term: "Evolution",
+    definition: "The process by which living organisms change over time through natural selection.",
+  },
+  {
+    id: 10,
+    term: "Renewable Energy",
+    definition: "Energy derived from natural processes that are replenished constantly.", 
+  }
+];
+
+export const defaultSongs = [
+  { title: "Perfect", artist: "Ed Sheeran", album: "÷", image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/12/05/18/Ed-Sheeran.jpg" },
+  { title: "Shape of You", artist: "Ed Sheeran", album: "÷", image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/12/05/18/Ed-Sheeran.jpg" },
+  { title: "Thinking Out Loud", artist: "Ed Sheeran", album: "×", image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/12/05/18/Ed-Sheeran.jpg" },
+  { title: "Bad Habits", artist: "Ed Sheeran", album: "=", image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/12/05/18/Ed-Sheeran.jpg" },
+  { title: "Castle on the Hill", artist: "Ed Sheeran", album: "÷", image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/12/05/18/Ed-Sheeran.jpg" },
+  { title: "Photograph", artist: "Ed Sheeran", album: "×", image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/12/05/18/Ed-Sheeran.jpg" },
+  { title: "Shivers", artist: "Ed Sheeran", album: "=", image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/12/05/18/Ed-Sheeran.jpg" }
 ];
