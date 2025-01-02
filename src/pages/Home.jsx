@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { Menu, ChevronDown, X } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 import ProgressBar from "../components/ProgressBar";
 import Step1 from "../components/Step1";
 import Step2 from "../components/Step2";
@@ -48,7 +48,7 @@ export default function Home() {
       </header>
 
       {/* Sidebar Menu */}
-      <motion.div
+      {/* <motion.div
         initial={{ x: "100%" }}
         animate={{ x: isMenuOpen ? 0 : "100%" }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -68,15 +68,15 @@ export default function Home() {
           <li className="p-4 hover:bg-gray-700">Menu Item 2</li>
           <li className="p-4 hover:bg-gray-700">Menu Item 3</li>
         </ul>
-      </motion.div>
+      </motion.div> */}
 
       {/* Overlay for Sidebar */}
-      {isMenuOpen && (
+      {/* {isMenuOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={() => setIsMenuOpen(false)}
         ></div>
-      )}
+      )} */}
 
       <ProgressBar currentStep={currentStep} />
       <div
