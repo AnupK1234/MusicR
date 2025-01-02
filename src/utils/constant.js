@@ -112,3 +112,20 @@ export const defaultSongs = [
       "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/12/05/18/Ed-Sheeran.jpg",
   },
 ];
+
+export const song = {
+  title: "Perfect (Photosynthesis Version)",
+  artist: "Ed Sheeran",
+  originalLyrics: [
+    "I found a love for me",
+    "Oh, darling, just dive right in and follow my lead",
+    "Well, I found a girl, beautiful and sweet",
+    "Oh, I never knew you were the someone waitin' for me",
+  ],
+  modifiedLyrics: [
+    "I found a leaf so green",
+    "Oh sunlight, just shine right in and power my needs",
+    "Well, I found chlorophyll, essential and key",
+    "Oh, I never knew you were the process feeding me",
+  ],
+};

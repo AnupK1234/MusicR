@@ -14,6 +14,7 @@ import {
   Music2,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { song } from "../utils/constant";
 
 export default function Main() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -22,23 +23,6 @@ export default function Main() {
   const [volume, setVolume] = useState(80);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
-
-  const song = {
-    title: "Perfect (Photosynthesis Version)",
-    artist: "Ed Sheeran",
-    originalLyrics: [
-      "I found a love for me",
-      "Oh, darling, just dive right in and follow my lead",
-      "Well, I found a girl, beautiful and sweet",
-      "Oh, I never knew you were the someone waitin' for me",
-    ],
-    modifiedLyrics: [
-      "I found a leaf so green",
-      "Oh sunlight, just shine right in and power my needs",
-      "Well, I found chlorophyll, essential and key",
-      "Oh, I never knew you were the process feeding me",
-    ],
-  };
 
   return (
     <div className="min-h-screen bg-gray-900 flex flex-col">
@@ -153,20 +137,20 @@ export default function Main() {
           <h2 className="text-xl sm:text-2xl font-bold mb-6 text-center text-pink-400">
             Lyrics Comparison
           </h2>
-          <div className="overflow-x-auto text-white -mx-4 sm:mx-0">
+          <div className="hidden sm:block overflow-x-auto text-white -mx-4 sm:mx-0">
             <table className="w-full border-collapse min-w-[640px]">
               <thead className="bg-gray-700">
                 <tr>
-                  <th className="p-3 sm:p-4 text-left border-b border-purple-500">
+                  <th className="p-4 text-left border-b border-purple-500">
                     #
                   </th>
-                  <th className="p-3 sm:p-4 text-left border-b border-purple-500">
+                  <th className="p-4 text-left border-b border-purple-500">
                     Original Lyrics
                   </th>
                   <th className="w-16 text-center border-b border-purple-500">
                     →
                   </th>
-                  <th className="p-3 sm:p-4 text-left border-b border-purple-500">
+                  <th className="p-4 text-left border-b border-purple-500">
                     Modified Lyrics
                   </th>
                 </tr>
@@ -174,16 +158,16 @@ export default function Main() {
               <tbody>
                 {song.originalLyrics.map((lyric, index) => (
                   <tr key={index} className="border-b border-purple-500/30">
-                    <td className="p-3 sm:p-4 border-r border-purple-500/30 font-medium text-pink-400">
+                    <td className="p-4 border-r border-purple-500/30 font-medium text-pink-400">
                       {index + 1}
                     </td>
-                    <td className="p-3 sm:p-4 border-r border-purple-500/30">
+                    <td className="p-4 border-r border-purple-500/30">
                       {lyric}
                     </td>
                     <td className="text-center border-r border-purple-500/30 text-pink-400">
                       →
                     </td>
-                    <td className="p-3 sm:p-4">
+                    <td className="p-4">
                       {song.modifiedLyrics[index]
                         .split(" ")
                         .map((word, wordIndex) => {
@@ -209,11 +193,58 @@ export default function Main() {
               </tbody>
             </table>
           </div>
+
+          {/* Mobile View */}
+          <div className="sm:hidden text-white h-96 flex flex-col">
+            <div className="bg-gray-700 rounded-t-lg p-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="font-medium">Original Lyrics</div>
+                <div className="font-medium">Modified Lyrics</div>
+              </div>
+            </div>
+
+            <div className="overflow-y-auto flex-1">
+              {song.originalLyrics.map((lyric, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-800 p-4 border-b border-purple-500/30"
+                >
+                  <div className="text-pink-400 mb-2">#{index + 1}</div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="border-l-2 border-purple-500 pl-3 text-sm break-words">
+                      {lyric}
+                    </div>
+                    <div className="border-l-2 border-pink-400 pl-3 text-sm break-words">
+                      {song.modifiedLyrics[index]
+                        .split(" ")
+                        .map((word, wordIndex) => {
+                          const isChanged = !lyric
+                            .toLowerCase()
+                            .includes(word.toLowerCase());
+                          return (
+                            <span
+                              key={wordIndex}
+                              className={
+                                isChanged
+                                  ? "bg-purple-500/30 px-1 rounded text-pink-300"
+                                  : ""
+                              }
+                            >
+                              {word}{" "}
+                            </span>
+                          );
+                        })}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </main>
 
       {/* Audio Player */}
-      <div className="fixed bottom-0 left-0 right-0 bg-gray-800/95 border-t border-purple-500 shadow-lg backdrop-blur-lg">
+      <div className="fixed bottom-0 left-0 right-0 bg-gray-800/95 border-t border-purple-500 shadow-lg backdrop-blur-lg z-50">
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <div className="flex items-center gap-4 w-full sm:w-auto">
